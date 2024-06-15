@@ -1186,7 +1186,7 @@ class frame extends JFrame implements ActionListener {
             card.show(cardpanel,"cviewpan");
         }
 
-        
+
         if (e.getSource() == adsubmit){
            addmethod();
         }
@@ -1221,10 +1221,10 @@ class frame extends JFrame implements ActionListener {
 public class Main {
     public static void main(String[] args) {
         frame screen = new frame();
-        screen.setSize(1000, 700);
+        screen.setSize(1000, 850);
         screen.setVisible(true);
         screen.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
         screen.setTitle("Student Management System");
-        screen.setLocation(200, 80);
+        screen.setLocation(230, 4);
     }
 }
