@@ -34,12 +34,13 @@ class frame extends JFrame implements ActionListener {
 
     frame( ) {
 
-        midpnl = new JPanel(new BorderLayout());
+        midpnl = new JPanel(new GridBagLayout());
+        GridBagConstraints gv = new GridBagConstraints();
+        gv.insets = new Insets(0,0,0,0);
         JLabel txtlbl = new JLabel("Choose the service required");
-        txtlbl.setBorder(BorderFactory.createEmptyBorder(0,360,0,0));
         txtlbl.setFont(new Font("Arial",Font.BOLD,30));
         midpnl.setBackground(Color.GRAY);
-        midpnl.add(txtlbl,BorderLayout.CENTER);
+        midpnl.add(txtlbl,gv);
 
         sidepnl = new JPanel();
         sidepnl.setLayout(new BoxLayout(sidepnl, BoxLayout.Y_AXIS));
@@ -1185,8 +1186,7 @@ class frame extends JFrame implements ActionListener {
             card.show(cardpanel,"cviewpan");
         }
 
-
-
+        
         if (e.getSource() == adsubmit){
            addmethod();
         }
